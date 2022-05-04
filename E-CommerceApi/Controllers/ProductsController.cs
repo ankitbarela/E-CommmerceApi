@@ -26,29 +26,11 @@ namespace E_CommerceApi.Controllers
         [HttpGet]
         public IEnumerable<Products> Get()
         {
-           var  prod = new List<Products>();
+            //var  prod = new List<Products>();
 
-            Products[] Product = new Products[2];
-            Product[0] = new Products { 
-            Id = 1,
-            Name = "Ore Sweater",
-            Size = "M, XL, XXL",
-            Color = "Custom made to what you want",
-            Price = "15000",
-            Public_id = "store / store4_rlkr3u",
-            QuantityInStock = 20
-            };
-            Product[1] = new Products
-            {
-                Id = 2,
-                Name = "McPherson T-shirt",
-                Size = "S, M, L",
-                Color = "White",
-                Price = "4000",
-                Public_id = "store/store2_iuj9gd",
-                QuantityInStock = 13
-            };
-            return Product;
+            ProductData productData = new();
+            var result = productData.GetProducts();
+            return result;
         }
     }
 }

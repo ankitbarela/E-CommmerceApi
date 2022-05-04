@@ -11,10 +11,6 @@ namespace E_CommerceApi.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        //readonly Products[] Product;
-        ////{
-        ////     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        //// };
 
         private readonly ILogger<ProductsController> _logger;
 
@@ -26,7 +22,6 @@ namespace E_CommerceApi.Controllers
         [HttpGet]
         public IEnumerable<Products> Get()
         {
-            //var  prod = new List<Products>();
 
             ProductData productData = new();
             var result = productData.GetProducts();

@@ -9,9 +9,8 @@ namespace E_CommerceApi
     {
         public IEnumerable<Products> GetProducts()
         {
-            //var  prod = new List<Products>();
 
-            Products[] Product = new Products[3];
+            Products[] Product = new Products[6];
             Product[0] = new Products
             {
                 Id = 1,
@@ -41,6 +40,36 @@ namespace E_CommerceApi
                 Price = "3500",
                 Public_id = "store/store3_ph4qw4",
                 QuantityInStock = 50
+            };
+            Product[3] = new Products
+            {
+                Id = 4,
+                Name = "Karpos Shoes",
+                Size = "39 - 43",
+                Color = "Brown, Black",
+                Price = "19500",
+                Public_id = "store/store7_rkjrdo",
+                QuantityInStock = 50
+            };
+            Product[4] = new Products
+            {
+                Id = 5,
+                Name = "Rainbow T-shirt",
+                Size = "S, M, L",
+                Color = "As seen in the picture",
+                Price = "5000",
+                Public_id = "store/store11_td1at8",
+                QuantityInStock = 50
+            };
+            Product[5] = new Products
+            {
+                Id = 6,
+                Name = "Gregory Shoes",
+                Size = "37 - 40",
+                Color = "Yellow, Black",
+                Price = "10500",
+                Public_id = "store/store5_sht2jx",
+                QuantityInStock = 10
             };
             return Product;
         }
